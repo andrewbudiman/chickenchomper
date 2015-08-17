@@ -1,0 +1,95 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-variant: normal;
+    font-size: 18px;
+    background-color: #e0e0e0;
+}
+
+#body_container {
+    margin: 0;
+    width: 100%;
+    min-width: 650px;
+    height: 100%;
+    min-height: 100%;
+    display: inline-block;
+}
+
+#nav_bar {
+    margin: 0px;
+    padding: 12px 50px 4px 50px;
+    height: 30px;
+    background-color: #4679bd;
+    top: 0px;
+    z-index: 1;
+}
+
+#nav_bar_left {
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+#nav_bar_right {
+    float: right;
+    position: relative;
+    display: inline-block;
+    min-width: 400px;
+}
+
+#nav_bar_right ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_bar_right li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#nav_bar a {
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+#nav_bar a:link {
+    text-decoration: none;
+}
+
+#nav_bar a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+#body_title {
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+#body_content {
+    height: 100%;
+    padding: 10px;
+}
+
+#body_content a {
+    color: #e07d0b;
+}
+
+#body_content a:link {
+    text-decoration: none;
+}
+
+#body_content a:hover {
+    text-decoration: none;
+    color: #bbbbbb;
+}

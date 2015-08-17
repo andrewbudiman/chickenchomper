@@ -1,0 +1,24 @@
+#miniprojects_content {
+    width: 150px;
+    margin: auto;
+}
+
+#miniprojects_content ul {
+    padding: 0;
+}
+
+#miniprojects_content li {
+    list-style-type: none;
+    padding: 0px 0px 10px 0px;
+}
+
+.project {
+    width: 600px;
+    margin: 0px auto;
+    padding-bottom: 20px;
+}
+
+.project_header {
+    font-size: 24px;
+    padding: 5px 0px 10px 0px;
+}

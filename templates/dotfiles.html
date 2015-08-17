@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+    Dot Files
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dotfiles.css') }}"/>
+    <div id="dotfiles_content">
+        <ul>
+            <li>.vimrc - <a href="http://adbudima-general.s3-website-us-west-1.amazonaws.com/vimrc.html">view</a> - <a href="https://s3-us-west-1.amazonaws.com/adbudima-general/.vimrc">download</a></li>
+            <li>.zshrc - <a href="http://adbudima-general.s3-website-us-west-1.amazonaws.com/zshrc.html">view</a> - <a href="https://s3-us-west-1.amazonaws.com/adbudima-general/.zshrc">download</a></li>
+            <li>.tmux.conf - <a href="http://adbudima-general.s3-website-us-west-1.amazonaws.com/tmux_conf.html">view</a> - <a href="https://s3-us-west-1.amazonaws.com/adbudima-general/.tmux.conf">download</a></li>
+            <li>(todo: expand this section into a deeper overview of my dev environment)</li>
+        </ul>
+    </div>
+{% endblock %}

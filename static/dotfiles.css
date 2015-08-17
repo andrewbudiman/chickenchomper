@@ -1,0 +1,12 @@
+#dotfiles_content {
+    text-align: center;
+}
+
+#dotfiles_content ul {
+    padding: 0;
+}
+
+#dotfiles_content li {
+    list-style-type: none;
+    padding: 0px 0px 10px 0px;
+}

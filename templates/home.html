@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+    Home
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}"/>
+    <div id="home_content">
+        <p>Hi, my name is Andrew and here is a small collection of various projects and interests of mine.</p>
+        <p>Born and raised in California, I received a BS in Computer Science from UC San Diego. Since college, I have been working on <a href="https://aws.amazon.com/dynamodb/">AWS DynamoDB</a>, Amazon's fast, scalable NoSQL database service. Some of my hobbies include running, rock climbing, soccer, rubik's cubes, tetris, and dota.</p>
+        <p>This site was put together using <a href="http://flask.pocoo.org/">Flask</a>, a simple, lightweight Python 'microframework'. The source can be found under <a href="http://chickenchomper.com/miniprojects">mini projects</a>. UI verification is only done for Chrome and Firefox. The site is currently undergoing a port from PHP to Python, so not all segments of the site are operational yet.</p>
+    </div>
+    <div id="profile">
+        <img src="{{ url_for('static', filename='profile.jpg') }}" />
+    </div>
+{% endblock %}

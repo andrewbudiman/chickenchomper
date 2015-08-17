@@ -1,0 +1,16 @@
+#home_content {
+    width: 600px;
+    margin: auto;
+}
+
+#profile {
+    width: 400px;
+    margin: auto;
+    padding: 50px;
+}
+
+#profile img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}

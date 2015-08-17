@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block title %}
+    Mini Projects
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='miniprojects.css') }}"/>
+    <div id="miniprojects_content">
+        <ul>
+            <li><a href="#chickenchomper">chickenchomper.com</a></li>
+            <li><a href="#tetris_puzzle_solver">Tetris puzzle solver</a></li>
+            <li><a href="#url_aliaser">Url aliaser</a></li>
+        </ul>
+    </div>
+    <div class="project">
+        <a name="chickenchomper"></a>
+        <div class="project_header">chickenchomper.com</div>
+        <div class="project_content">
+            <p>The site you are viewing is a basic web server implementation using Python, HTML, CSS, and JavaScript. It was designed to be simple and quick to develop, so <a href="http://flask.pocoo.org/">Flask</a> was chosen as the web framework. Self-described as a 'microframework', Flask certainly felt lightweight with a single-command install and a 7-line 'Hello World' web server. Making the site openly available was as easy specifying port 80 and running as root.</p>
+            <p>Hosted on this site are personal projects, simple web games, and various resources. I have put the source code for my personal projects on GitHub, and plan to incorporate demos of some, if not all, of them into this site. The web games are coded in Flash as well as HTML5 and use a sql database to record statistics.</p>
+            <p>I am actually in the process of porting the source code from PHP to Python, so this site doesn't have everything it should yet. You can view the new site's source <a href="https://github.com/chompee/chickenchomper">here</a>, although pushes will likely lag a little behind what is running</p>
+        </div>
+    </div>
+    <div class="project">
+        <a name="tetris_puzzle_solver"></a>
+        <div class="project_header">Tetris puzzle solver</div>
+        <div class="project_content">
+            <p>Inspired by a puzzle competition, this program takes in a rectangle matrix and fits the correct tetris pieces to cover all the squares. However, instead of working with a blank slate, there are a few restrictions:</p>
+            <ul>
+                <li>every cell must be a part of a tetris piece</li>
+                <li>some of the piece boundaries are given</li>
+                <li>no two copies of the same piece may share an edge (reflections count as different pieces, rotations do not)</li>
+            </ul>
+            <p>A visual representation of the problem, the source, and tests can be found <a href="https://github.com/chompee/tetris-solver">here</a></p>
+        </div>
+    </div>
+    <div class="project">
+        <a name="url_aliaser"></a>
+        <div class="project_header">Url aliaser</div>
+        <div class="project_content">
+            <p>This is a 'work in progress' project between me and one of my friends. In essense, it is an exercise in implementing a basic TinyURL-like service from scratch to identify and tackle some of the associated challenges.</p>
+            <p>For example, one of the problems discussed was regarding how to generate the alias url. In the best case, the url would be as short as possible, responses would be fast (reduce collisions), and the algorithm should work when multiple servers are generating alias urls. The solution we are planning on implementing will involve partitioning the 'alias url space' and assigning a range of urls to use to each front end server. This way, each front end server can generate aliases sequentially locally. They will checkpoint globally where they are in that range periodically to help deal with fault tolerance. A locking mechanism will be used to ensure no two servers are given the same ranges.</p>
+            <p>The lightweight <a href="http://sparkjava.com/">Spark</a> Java web framework was chosen for speed of development. Although we want to think of performance at the cluster level, we don't actually care about the local server's throughput. The backend consists of DynamoDB table with an index for 2-way url lookups. <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html">DynamoDB local</a> is used for integration tests so we do not have to actually use a real table.</p>
+            <p>The source and test code so far can be found <a href="https://github.com/hsdistefa/UrlShortener">here</a>.</p>
+        </div>
+    </div>
+{% endblock %}
